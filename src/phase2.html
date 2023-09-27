@@ -7,7 +7,7 @@
     <title>Image Selector</title>
 </head>
 <body>
-    <h1>Select 2-4 Images</h1>
+    <h1>Select upto 3 Images</h1>
     <div class="image-container">
        
         <img src="car.jpg" alt="Image 1" class="selectable-image">
@@ -31,7 +31,7 @@
     
             selectableImages.forEach((image) => {
                 image.addEventListener('click', () => {
-                    if (selectedImages.length < 4 && !selectedImages.includes(image)) {
+                    if (selectedImages.length < 3& !selectedImages.includes(image)) {
                         selectedImages.push(image);
                         const selectedImageThumbnail = document.createElement('img');
                         selectedImageThumbnail.src = image.src;
