@@ -19,6 +19,12 @@ body {
     color: green;
     background: #24b6aa;
 }
+.submit{
+    background-color: blue;
+    color:white;
+    width: 250px;
+    height: 40px
+}
 
 .loginform {
     width: 380px;
