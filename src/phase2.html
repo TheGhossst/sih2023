@@ -15,5 +15,29 @@
         <img src="franky.jpg" alt="Image 2" class="selectable-image">
         <img src="cat.jpg" alt="Image 2" class="selectable-image">
         <img src="cycle.jpg" alt="Image 2" class="selectable-image">
-        <img>
+        <img> 
+    </div>
+        <div class="selected-images">
+        </div>
+        <script>
+            const selectableImages = document.querySelectorAll('.selectable-image');
+            const selectedImagesContainer = document.querySelector('.selected-images');
+    
+            let selectedImages = [];
+    
+            selectableImages.forEach((image) => {
+                image.addEventListener('click', () => {
+                    if (selectedImages.length < 4 && !selectedImages.includes(image)) {
+                        selectedImages.push(image);
+                        const selectedImageThumbnail = document.createElement('img');
+                        selectedImageThumbnail.src = image.src;
+                        selectedImageThumbnail.alt = image.alt;
+                        selectedImageThumbnail.className = 'selected-image';
+                        selectedImagesContainer.appendChild(selectedImageThumbnail);
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
 
